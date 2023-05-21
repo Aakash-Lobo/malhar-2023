@@ -45,7 +45,7 @@ function particleSetup() {
 
   // https://images.unsplash.com/photo-1488554378835-f7acf46e6c98?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzIzMjEyNDM&ixlib=rb-4.0.3&q=80
   loader.load(
-    "assets/final1.png",
+    "https://images.unsplash.com/photo-1488554378835-f7acf46e6c98?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzIzMjEyNDM&ixlib=rb-4.0.3&q=80",
     function (texture) {
       let portalGeo = new THREE.PlaneGeometry(350, 350);
       let portalMaterial = new THREE.MeshStandardMaterial({
