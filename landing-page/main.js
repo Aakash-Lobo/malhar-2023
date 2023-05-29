@@ -1,89 +1,112 @@
 import * as THREE from "https://cdn.skypack.dev/three@0.152.2";
 
-let scene,
-  camera,
-  cloudParticles = [];
-let renderer = new THREE.WebGLRenderer();
+var scene,
+  sceneLight,
+  portalLight,
+  cam,
+  renderer,
+  portalParticles = [],
+  smokeParticles = [];
 
-function init() {
+function initScene() {
   scene = new THREE.Scene();
-  camera = new THREE.PerspectiveCamera(
-    60,
+
+  sceneLight = new THREE.DirectionalLight(0xF6DDEB, 0.5);
+  sceneLight.position.set(0, 0, 1);
+  scene.add(sceneLight);
+
+  portalLight = new THREE.PointLight(0x93CCF8, 10, 800, 3);
+  portalLight.position.set(0, 0, 250);
+  scene.add(portalLight);
+
+  cam = new THREE.PerspectiveCamera(
+    160,
     window.innerWidth / window.innerHeight,
     1,
     1000
   );
-  camera.position.z = -3;
-  camera.rotation.x = 1.16;
-  camera.rotation.y = -0.12;
-  camera.rotation.z = 0.27;
+  cam.position.z = 107;
+  scene.add(cam);
 
-  let ambient = new THREE.AmbientLight(0x8f84ad);
-  scene.add(ambient);
-
-  let directionalLight = new THREE.DirectionalLight(0xfb8500);
-  directionalLight.position.set(0, 0, 1);
-  scene.add(directionalLight);
-
-  let lightPurpleLight = new THREE.PointLight(0xd48fd4, 25, 700, 2);
-  lightPurpleLight.position.set(-100, 300, 100);
-  scene.add(lightPurpleLight);
-
-  let redLight = new THREE.PointLight(0xdc2f02, 75, 700, 2);
-  redLight.position.set(200, 300, 100);
-  scene.add(redLight);
-
-  let blueLight = new THREE.PointLight(0xa9abdc, 50, 700, 2);
-  blueLight.position.set(300, 300, 200);
-  scene.add(blueLight);
-
+  renderer = new THREE.WebGLRenderer();
+  renderer.setClearColor(0x0e0b1e, 1);
   renderer.setSize(window.innerWidth, window.innerHeight);
-  scene.fog = new THREE.FogExp2(0x201b24, 0.001);
-  renderer.setClearColor(scene.fog.color);
   document.body.appendChild(renderer.domElement);
 
+  particleSetup();
+}
+function particleSetup() {
   let loader = new THREE.TextureLoader();
-  loader.load("./assets/smoke.png", function (texture) {
-    let cloudGeo = new THREE.PlaneGeometry(500, 500);
-    let cloudMaterial = new THREE.MeshLambertMaterial({
+
+  loader.load("./assets/smoke5.png", function (texture) {
+    let portalGeo = new THREE.PlaneGeometry(350, 350);
+    let portalMaterial = new THREE.MeshStandardMaterial({
+      map: texture,
+      transparent: true,
+    });
+    let smokeGeo = new THREE.PlaneGeometry(1000, 1000);
+    let smokeMaterial = new THREE.MeshStandardMaterial({
       map: texture,
       transparent: true,
     });
 
-    for (let p = 0; p < 30; p++) {
-      var cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
-      cloud.position.set(
-        Math.random() * 400 - 200,
-        300,
-        Math.random() * 500 - 500
+    for (let p = 620; p > 250; p--) {
+      let particle = new THREE.Mesh(portalGeo, portalMaterial);
+      particle.position.set(
+        p * Math.cos((4 * p * Math.PI) / 180),
+        p * Math.sin((4 * p * Math.PI) / 180),
+        0.1 * p
       );
-      cloud.rotation.x = 1.16;
-      cloud.rotation.y = -0.12;
-      cloud.rotation.z = Math.random() * 2 * Math.PI;
-      cloud.material.opacity = 0.55;
-      cloudParticles.push(cloud);
-      scene.add(cloud);
+      particle.rotation.z = Math.random() * 360;
+      portalParticles.push(particle);
+      scene.add(particle);
     }
+
+    for (let p = 0; p < 10; p++) {
+      let particle = new THREE.Mesh(smokeGeo, smokeMaterial);
+      particle.position.set(
+        Math.random() * 1000 - 500,
+        Math.random() * 400 - 200,
+        25
+      );
+      particle.rotation.z = Math.random() * 360;
+      particle.material.opacity = 0.6;
+      portalParticles.push(particle);
+      scene.add(particle);
+    }
+
+    window.addEventListener("resize", onWindowResize, false);
+
+    update();
   });
-
-  window.addEventListener("resize", onWindowResize, false);
-
-  render();
 }
 
-function onWindowResize(){
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight)
+function onWindowResize() {
+  cam.aspect = window.innerWidth / window.innerHeight;
+  cam.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
-function render() {
-  cloudParticles.forEach((p) => {
-    p.rotation.z -= 0.01;
-  });
-  camera.rotation.z += 0.001;
-  renderer.render(scene, camera);
-  requestAnimationFrame(render);
+let clock = new THREE.Clock();
+let delta = 0;
+// 30 fps
+let interval = 1 / 30;
+
+function update() {
+  requestAnimationFrame(update);
+  delta += clock.getDelta();
+
+  if (delta > interval) {
+    // The draw or time dependent code are here
+    portalParticles.forEach((p) => {
+      p.rotation.z -= 0.003 * 1.5;
+      p = null;
+    });
+
+    renderer.render(scene, cam);
+
+    delta = delta % interval;
+  }
 }
 
-init();
+initScene();
