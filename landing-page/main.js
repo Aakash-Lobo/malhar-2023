@@ -25,7 +25,7 @@ function getPixelFactor() {
   if (getWidth() < 770) {
     return 1.7;
   } else {
-    return 0.69;
+    return 0.6;
   }
 }
 
@@ -43,7 +43,7 @@ function initScene() {
   scene.add(portalLight);
 
   cam = new THREE.PerspectiveCamera(160, getWidth() / getHeight(), 1, 1000);
-  cam.position.z = 117;
+  cam.position.z = 112;
   cam.position.x = -35;
   cam.aspect = getWidth() / getHeight();
   scene.add(cam);
