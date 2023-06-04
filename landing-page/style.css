@@ -32,8 +32,6 @@ body {
   margin: 0px;
   overflow: hidden;
   background-color: black;
-  font-family: "Myriad Pro Regular", serif;
-  font-size: 1.4rem;
   -webkit-animation-delay: 4s;
   -moz-animation-delay: 4s;
   animation-delay: 4s;
@@ -136,6 +134,8 @@ nav {
   z-index: 99;
   background-color: transparent;
   padding: 16px 32px;
+  font-family: "Myriad Pro Regular", serif;
+  font-size: 1.4rem;
 }
 
 .hamburger {
@@ -254,23 +254,13 @@ nav {
   font-weight: bold;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 970px) {
   .mobile-menu,
   .hamburger {
     display: none;
   }
   .menu {
     display: flex;
-  }
-}
-
-@media (orientation: landscape) and (max-width: 767px) {
-  .mobile-menu,
-  .hamburger {
-    display: block;
-  }
-  .menu {
-    display: none;
   }
 }
 
