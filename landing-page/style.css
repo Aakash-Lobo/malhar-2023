@@ -131,7 +131,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 99;
+  z-index: 1000;
   background-color: transparent;
   padding: 16px 32px;
   font-family: "Myriad Pro Regular", serif;
@@ -280,6 +280,7 @@ nav {
 }
 
 .overlay-image {
+  z-index: 100;
   position: absolute;
   display: flex;
   flex-direction: column;
