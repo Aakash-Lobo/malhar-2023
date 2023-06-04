@@ -22,10 +22,10 @@ function getHeight() {
 }
 
 function getPixelFactor() {
-  if (getWidth() < 770) {
+  if (getWidth() < 700) {
     return 1.7;
   } else {
-    return 0.7;
+    return 0.78;
   }
 }
 
