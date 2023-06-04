@@ -139,7 +139,7 @@ nav {
   display: none;
   flex: 0.7 1 0%;
   justify-content: space-evenly;
-  margin: 0 -16px;
+  margin: 5px -16px;
 }
 
 .menu a {
@@ -212,7 +212,6 @@ nav {
   }
 }
 
-
 .container .contactinfo {
   display: flex;
   top: 0;
@@ -261,7 +260,6 @@ nav {
   font-weight: 100;
   opacity: 1;
 }
-
 
 .container .contactusform {
   display: flex;
