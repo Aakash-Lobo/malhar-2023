@@ -7,11 +7,12 @@ hamburger.addEventListener("click", function () {
   mobile_menu.classList.toggle('is-open');
 });
 
-const navbar = document.getElementById('navbar');
-window.onscroll = () => {
-    if (window.scrollY > 10) {
-        navbar.classList.add('nav-active');
-    } else {
-        navbar.classList.remove('nav-active');
-    }
-};
+// const navbar = document.getElementById('navbar');
+// window.onscroll = () => {
+//     if (window.scrollY > 10) {
+//         console.log('scrolling');
+//         navbar.classList.add('nav-active');
+//     } else {
+//         navbar.classList.remove('nav-active');
+//     }
+// };
