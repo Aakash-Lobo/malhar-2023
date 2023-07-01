@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+.dept-card-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.deptCard {
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+  max-width: 1000px;
+  margin: 2rem auto;
+  border: 1px solid #ffffff22;
+  background-color: #282c34;
+  background: linear-gradient(0deg, #282c34 0%, rgba(17, 0, 32, 0.5) 100%);
+  box-shadow: 0 7px 20px 5px #00000088;
+  border-radius: 0.7rem;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  overflow: hidden;
+  transition: 0.5s all;
+  text-align: center;
+}
+
+.deptCard ins {
+  text-decoration: none;
+}
+
+.deptCard h2 {
+  font-family: "Myriad Pro Regular", serif;
+  color: white;
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  /* height: 50px; */
+  z-index: 99;
+}
+
+.deptCard .main {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 1rem;
+  text-align: center;
+  margin: auto;
+}
+
+.deptCard .main .deptIcon {
+  border-radius: 0.5rem;
+  width: 130px;
+  height: auto;
+  object-fit: cover;
+  margin: 0px auto;
+}
+.deptCard .main .description {
+  z-index: 99;
+  margin: 0.5rem 0;
+  color: #c4bfd7;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.deptCard ::before {
+  position: fixed;
+  content: "";
+  box-shadow: 0 0 100px 40px #ffffff08;
+  top: -10%;
+  left: -100%;
+  transform: rotate(-45deg);
+  height: 60rem;
+  transition: 0.7s all;
+}
+.deptCard:hover {
+  border: 1px solid #ffffff44;
+  box-shadow: 0 7px 50px 10px #000000aa;
+  transform: scale(1.015);
+  transform: perspective(1px) translateZ(0);
+  backface-visibility: hidden;
+  filter: brightness(1.3);
+}
+
+@media (max-width: 1270px) {
+  .dept-card-container {
+    flex-direction: column;
+  }
+  .deptCard {
+    max-width: 80%;
+    border: 1px solid #ffffff44;
+    box-shadow: 0 7px 50px 10px #000000aa;
+    transform: scale(1.015);
+    transform: perspective(1px) translateZ(0);
+    backface-visibility: hidden;
+    filter: brightness(1.3);
+  }
+  .deptIcon {
+    width: 80px;
+  }
+  .description {
+    color: #e0dcee;
+  }
+}
+
+.dept-card-container .deptCard .main button {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #61479c;
+  border: 1px solid transparent;
+  border-radius: 0.4rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 15px auto;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 1s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 200px;
+}
+
+.dept-card-container .deptCard .main button:hover {
+  background-color: #f220b7;
+}
+
+/*Department Pages*/
+
+.main-container .deptHeader {
+  width: 100%;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.main-container .deptHeader h1 {
+  font-family: "Myriad Pro Regular", serif;
+  color: white;
+  font-weight: 400;
+  font-size: 3rem;
+  /* height: 50px; */
+  z-index: 99;
+  margin-top: 0px;
+}
+
+.main-container .deptHeader .deptIcon {
+  border-radius: 0.5rem;
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+  margin: 100px auto 0px auto;
+  /* margin-top: 100px; */
+}
+
+.event-card-row {
+  margin: 80px auto;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.eventCard {
+  color: white;
+  width: 300px;
+  height: auto;
+  background-image: linear-gradient(to left, #c92159 10%, #a93379 90%);
+  outline: 1px solid #000000;
+  box-shadow: 0px 0px 50px #000000c1;
+  border-radius: 15px;
+  color: #302c77;
+  padding: 30px;
+}
+
+.eventCard h2 {
+  font-family: "Myriad Pro Regular", serif;
+  font-weight: 400;
+  font-size: 2.1rem;
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+}
+
+.eventCard .eventDesc {
+  font-family: "Helvetica", serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: left;
+  color: white;
+}
+
+.eventCard .eventDetails {
+  font-family: "Helvetica", serif;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: left;
+  line-height: 2;
+  color: white;
+}
+
+@media (max-width: 1300px) {
+  .event-card-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .eventCard {
+    margin: 20px 0;
+    width: 70%;
+  }
+
+  .main-container .deptHeader h1 {
+    font-size: 1.8rem;
+  }
+
+  .eventCard h2 {
+    font-family: "Myriad Pro Regular", serif;
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+  }
+
+  .eventCard .eventDesc {
+    font-family: "Helvetica", serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .eventCard .eventDetails {
+    font-family: "Helvetica", serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: left;
+    line-height: 2;
+  }
+}

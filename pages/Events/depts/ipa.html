@@ -40,24 +40,44 @@
       content="https://malharfest.in/landing-page/assets/finalfinalfinal.png"
     />
 
-    <title>Malhar Fest 2023 - Eye of the Storm</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Indian Performing Arts Events</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../cards.css" />
     <link
       rel="shortcut icon"
-      href="./assets/favicon/favicon-32x32.png"
+      href="../assets/favicon/favicon-32x32.png"
       type="image/x-icon"
     />
     <link
       rel="shortcut icon"
-      href="./assets/favicon/favicon.ico"
+      href="../assets/favicon/favicon.ico"
       type="image/x-icon"
     />
-  </head>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <style></style>
+  </head>
+  <!-- back ground starts-->
   <body id="body">
     <h1 class="hh" aria-hidden="true">Malhar Fest 2023 - Eye Of The Storm</h1>
-    <div class="lightning"></div>
+    <div class="animated">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+      <div class="four"></div>
+      <div class="seven"></div>
+      <div class="five"></div>
+      <div class="six"></div>
+    </div>
+    <!-- back ground ends-->
 
+    <!-- nav bar starts-->
     <nav id="navbar">
       <div class="nav-container">
         <button class="hamburger">
@@ -68,7 +88,7 @@
 
         <div class="menu">
           <div class="nav-item">
-            <a aria-label="Link to Home Page" href="./index.html">Home</a>
+            <a aria-label="Link to Home Page" href="#">Home</a>
           </div>
           <div class="nav-item">
             <a
@@ -85,33 +105,27 @@
             >
           </div>
           <div class="nav-item">
-            <a
-              href="../pages/Events/index.html"
-              aria-label="Link to Events Page"
+            <a href="../index.html" aria-label="Link to Events Page on Linktree"
               >Events</a
             >
           </div>
           <div class="nav-item">
             <a
               href="https://blog.malharfest.in"
-              aria-label="Link to Official Malhar Blog"
+              aria-label="Link to Announcements Page on Linktree"
               >Blog</a
             >
           </div>
           <div class="nav-item">
-            <a
-              aria-label="Link to Workforce Page"
-              href="../pages/Workforce/index.html"
-              >Workforce</a
-            >
+            <a aria-label="Link to Contact Us Page" href="#">Workforce</a>
           </div>
         </div>
 
         <div class="mobile-menu">
-          <a aria-label="Link to Home Page" href="./index.html">Home</a>
+          <a aria-label="Link to Home Page" href="#">Home</a>
           <a
-            aria-label="Link to Contact Us Page"
             href="../pages/Contact/index.html"
+            aria-label="Link to Contact Us Page"
             >Contact</a
           >
           <a
@@ -119,7 +133,7 @@
             aria-label="Link to Announcements Page on Linktree"
             >Announcements</a
           >
-          <a href="../pages/Events/index.html" aria-label="Link to Events Page"
+          <a href="../index.html" aria-label="Link to Events Page on Linktree"
             >Events</a
           >
           <a
@@ -127,36 +141,63 @@
             aria-label="Link to Official Malhar Blog"
             >Blog</a
           >
-          <a
-            aria-label="Link to Workforce Page"
-            href="../pages/Workforce/index.html"
-            >Workforce</a
-          >
+          <a aria-label="Link to Workforce Page" href="#">Workforce</a>
         </div>
       </div>
     </nav>
+    <!-- nav bar ends-->
 
+    <!-- events cards starts-->
     <div class="page-load"></div>
 
-    <div class="overlay-image fadeIn" id="overlay-image">
-      <img
-        class="overlayLogo"
-        src="./assets/overlay-image1.png"
-        alt="overlay-image"
-        aria-label="none"
-      />
-    </div>
-
     <div class="main-container fadeIn" id="main-container">
-      <img
-        class="logo"
-        src="./assets/finalfinal.png"
-        alt="Malhar Fest 2023 - Eye of The Storm Logo"
-        aria-labelledby="Malhar Fest 2023 - Eye of The Storm Logo"
-      />
-    </div>
+      <div class="deptHeader">
+        <img
+          class="deptIcon"
+          src="../assets/dept_icons/ipa.png"
+          alt="deptCard"
+        />
+        <h1>Indian Performing Arts</h1>
+      </div>
 
-    <script src="./nav.js"></script>
-    <script defer type="module" src="./main.js"></script>
+      <div class="event-card-row">
+        <div class="eventCard">
+          <h2>Sirf Sattar Second Hain Tumhare Pass</h2>
+          <div class="eventDesc">
+            In eliminations, participants will get a chance to perform
+            BollyFolk. In finals, this event features vibrant Indian folk dance,
+            colorful costumes, and captivating storytelling, with participants
+            performing on non-film folk music. The prop changes every 70 seconds
+            in the choreography.
+          </div>
+          <div class="eventDetails">
+            <strong>Open to : </strong>Contingents, PRNCs and OTSE<br />
+            <strong>Type number : </strong>Group Event (6-10 per group)<br />
+            <strong>Audience : </strong>Allowed for finals<br />
+            <strong>Event Cap : </strong>Eliminations : 20 entries, Finals : 12
+            entries<br />
+            <strong>Max reg. per contingents : </strong>1 entry<br />
+          </div>
+        </div>
+        <div class="eventCard">
+          <h2>Mehfil-e-Malhar</h2>
+          <div class="eventDesc">
+            In eliminations and finals, teams will perform Sufi, Ghazal, or
+            Qawwali songs at Mehfil-e-Malhar, showcasing Indian music's rich
+            heritage and spiritual resonance. Experience the beauty of Urdu and
+            Persian verses.
+          </div>
+          <div class="eventDetails">
+            <strong>Open to : </strong>Contingents, PRNCs<br />
+            <strong>Type number : </strong>Group Event (2-8 members)<br />
+            <strong>Audience : </strong>Allowed for finals<br />
+            <strong>Event Cap : </strong>Eliminations : 20 entries, Finals : 10
+            entries<br />
+            <strong>Max reg. per contingents : </strong>1 entry<br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../nav.js"></script>
   </body>
 </html>

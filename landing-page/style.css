@@ -119,11 +119,16 @@ body {
 }
 
 .nav-container {
-  max-width: 1300px;
+  max-width: 1600px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.nav-active {
+  background-color: rgba(0, 0, 0, 0.797);
+  box-shadow: 5px -1px 12px -5px grey;
 }
 
 nav {
@@ -133,9 +138,10 @@ nav {
   right: 0;
   z-index: 1000;
   background-color: transparent;
-  padding: 16px 32px;
+  padding: 16px 32px 40px 32px;
   font-family: "Myriad Pro Regular", serif;
   font-size: 1.4rem;
+  transition: 0.3s ease-in-out;
 }
 
 .hamburger {
@@ -167,7 +173,7 @@ nav {
 
 .hamburger:hover span:nth-child(2) {
   transform: translateX(10px);
-  background-color: var(--primary);
+  background-color: #ffb9f6;
 }
 
 .hamburger.is-active span:nth-child(1) {
@@ -184,13 +190,13 @@ nav {
 }
 
 .hamburger.is-active:hover span {
-  background-color: var(--primary);
+  background-color: #ffb9f6;
 }
 
 .menu {
   display: none;
-  flex: 0.7 1 0%;
-  justify-content: space-evenly;
+  flex: 1 1 0%;
+  justify-content: space-between;
   margin: 5px -16px;
 }
 
@@ -201,12 +207,13 @@ nav {
   width: fit-content;
   text-decoration: none;
   transition: 0.4s;
-  padding: 12px 0px;
+  padding: 12px 0px 6px 0px;
   border-bottom: transparent solid 2px;
 }
 
 .nav-item {
-  width: 200px;
+  width: fit-content;
+  margin: auto;
   text-align: center;
 }
 
@@ -249,12 +256,12 @@ nav {
 }
 
 .mobile-menu a:hover {
-  color: #eaaed0;
+  color: #ffb9f6;
   font-size: 1.55rem;
   font-weight: bold;
 }
 
-@media (min-width: 970px) {
+@media (min-width: 1300px) {
   .mobile-menu,
   .hamburger {
     display: none;
@@ -262,7 +269,13 @@ nav {
   .menu {
     display: flex;
   }
+  nav {
+    padding: 16px 32px 20px 32px;
+  }
 }
+
+/*navbar end*/
+
 
 .main-container {
   position: absolute;
