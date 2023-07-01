@@ -224,6 +224,7 @@
   .event-card-row {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 0px;
   }
 
   .eventCard {
