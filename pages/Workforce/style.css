@@ -42,10 +42,15 @@ body {
   background: linear-gradient(#241b50, #473394, #855da7);
 
   overflow-x: hidden;
-  animation: gradient 25s ease infinite;
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  animation-delay: 4s;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 
@@ -313,7 +318,7 @@ body {
     margin-bottom: 1.5rem;
   }
 
-  .heading{
+  .heading {
     font-size: 4rem;
   }
 }
@@ -978,7 +983,21 @@ body {
   background: linear-gradient(#241b50, #473394, #855da7);
 
   overflow-x: hidden;
-  animation: gradient 25s ease infinite;
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  animation-delay: 4s;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .quartet {
@@ -1849,9 +1868,7 @@ body {
     margin-bottom: 2.5rem;
   }
 }
- */
-
-h1 {
+*/ h1 {
   font-size: 7vh;
   padding-top: 5rem;
   text-align: center;
@@ -1859,11 +1876,9 @@ h1 {
   text-rendering: optimizeLegibility;
   color: rgb(198, 192, 233);
   margin-bottom: 0;
-
 }
 
-
-#navbar{
+#navbar {
   z-index: 1000000;
 }
 
@@ -2024,7 +2039,7 @@ nav {
     padding: 16px 32px 20px 32px;
   }
 
-  .heading{
+  .heading {
     color: rgb(171, 186, 235);
     margin-top: 4rem;
     margin-bottom: 0;
@@ -2033,7 +2048,7 @@ nav {
   }
 }
 
-.heading{
+.heading {
   color: rgb(171, 186, 235);
 }
 /*navbar end*/
