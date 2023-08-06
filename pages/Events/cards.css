@@ -233,7 +233,10 @@
   }
 
   .main-container .deptHeader h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
   }
 
   .eventCard h2 {
