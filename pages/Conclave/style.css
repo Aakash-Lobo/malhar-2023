@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
 
+@font-face {
+  font-family: "Myriad Pro Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Regular"),
+    url("../../assets/fonts/myriadpro/MYRIADPRO-REGULAR.woff") format("woff");
+}
+
 html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -8,6 +16,28 @@ html {
   margin: 0;
   padding: 0;
   font-family: "Nunito", sans-serif;
+}
+
+/*Scrollbar*/
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px transparent;
+  border-radius: 10px;
+  background-color: transparent;
+  z-index: 999;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+  z-index: 999;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px transparent;
+  background-color: gainsboro;
+  z-index: 999;
 }
 
 :root {
@@ -25,12 +55,23 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: radial-gradient(circle, #3d32b9, #3035af, #2536a5, #1b379a, #14378f, #113386, #0e2e7e, #0a2a75, #06206d, #041764, #030c5c, #030053);
+  background-image: radial-gradient(
+    circle,
+    #3d32b9,
+    #3035af,
+    #2536a5,
+    #1b379a,
+    #14378f,
+    #113386,
+    #0e2e7e,
+    #0a2a75,
+    #06206d,
+    #041764,
+    #030c5c,
+    #030053
+  );
   overflow-x: hidden;
-
 }
-
-
 
 iframe {
   /* overflow-clip-margin: content-box !important; */
@@ -41,11 +82,7 @@ iframe {
   overflow: clip !important;
   margin-top: 50px;
   margin-bottom: 50px;
-
 }
-
-
-
 
 h2 {
   color: white;
@@ -55,7 +92,6 @@ h2 {
   padding: 30px 0;
   font-weight: 800;
   margin-top: 3rem;
-
 }
 
 h1 {
@@ -70,9 +106,7 @@ h1 {
   font-size: 2.8rem;
   position: relative;
   top: 0px;
-
 }
-
 
 /* Content-1:Start */
 .box {
@@ -88,7 +122,7 @@ h1 {
 
 .box1 {
   margin-top: 10px;
-  margin-bottom: 5vw
+  margin-bottom: 5vw;
 }
 
 .content {
@@ -104,7 +138,6 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5px;
-
 }
 
 .level {
@@ -142,7 +175,6 @@ h1 {
   justify-self: auto;
   margin: 10px 30px 20px;
   height: auto;
-
 }
 
 .icons {
@@ -150,7 +182,6 @@ h1 {
   font-size: 1.5em;
   display: flex;
   justify-content: space-around;
-
 }
 
 .icons button {
@@ -259,15 +290,10 @@ h5 {
 
 /* Responsiveness:Start */
 @media (max-width: 480px) {
-
   .box {
-
-
     width: 82vw;
     height: auto;
     border-radius: 10px;
-
-
   }
 
   .button {
@@ -304,7 +330,6 @@ h5 {
   }
 
   iframe {
-
     width: 82vw;
     height: 15rem;
     display: flex;
@@ -313,21 +338,17 @@ h5 {
     margin: auto;
     margin-top: 8%;
     margin-bottom: 50px;
-
   }
 
   iframe {
-
     border-width: 2px;
     border-style: inset;
     border-color: initial;
     border-image: initial;
     overflow: clip !important;
-
   }
 
   h1 {
-
     color: white;
     text-align: center;
     width: 100%;
@@ -347,17 +368,12 @@ h5 {
     margin-top: 3rem;
   }
 
-  .job_title{
+  .job_title {
     font-size: smaller;
   }
 
-
-
   .job_discription {
-
     font-size: small;
-
-
   }
 }
 
@@ -367,7 +383,6 @@ h5 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
 }
 
 @keyframes move {
@@ -382,7 +397,7 @@ h5 {
   height: 100vh;
   top: 0;
   left: 0;
-  background: #3E1E68;
+  background: #3e1e68;
   overflow: hidden;
   z-index: -1;
 }
@@ -398,7 +413,6 @@ h5 {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-
 
 .background span:nth-child(0) {
   color: #4236a1;
@@ -600,8 +614,6 @@ h5 {
   box-shadow: 100vmin 0 13.493285712756597vmin currentColor;
 }
 
-
-
 /*navbar start*/
 
 .nav-container {
@@ -620,6 +632,7 @@ h5 {
 }
 
 nav {
+  font-family: "Myriad Pro Regular", serif !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -689,6 +702,9 @@ nav {
 }
 
 .menu a {
+  font-family: "Myriad Pro Regular", serif !important;
+  text-decoration: none;
+  font-weight: 400;
   color: var(--light);
   margin: 0 0px;
   text-align: center;
@@ -704,7 +720,6 @@ nav {
   margin: auto;
   text-align: center;
 }
-
 
 .menu a.is-active,
 .menu a:hover {
@@ -751,7 +766,6 @@ nav {
 }
 
 @media (min-width: 1300px) {
-
   .image img {
     height: 10vw;
     width: 10vw;
@@ -771,10 +785,7 @@ nav {
   }
 }
 
-
-
 /*navbar end*/
-
 
 #body::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px transparent;
