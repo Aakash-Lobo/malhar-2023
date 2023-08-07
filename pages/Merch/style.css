@@ -64,6 +64,15 @@ body {
   overflow-x: hidden;
 }
 
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
@@ -733,11 +742,11 @@ nav {
 }
 
 .btn-class-name {
-  --color: 0, 254, 252;
+  --color: 254, 1, 154;
+  color: rgb(254, 234, 246);
   border-radius: 0.5em;
   transition: 0.3s;
   background-color: rgba(var(--color), 0.2);
-  color: rgb(var(--color));
   fill: rgb(var(--color));
   font-family: monospace;
   font-weight: bolder;
