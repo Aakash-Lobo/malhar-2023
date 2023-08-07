@@ -12,10 +12,25 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-* {
+body {
   margin: 0;
   padding: 0;
   font-family: "Nunito", sans-serif;
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  animation-delay: 4s;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*Scrollbar*/
@@ -200,7 +215,7 @@ ion-icon:hover {
   color: #333;
 }
 
-button {
+.button {
   width: 130px;
   height: 40px;
   border-radius: 10px;
@@ -225,12 +240,12 @@ button {
   border: none;
 }
 
-button.connect:hover {
+.button.connect:hover {
   letter-spacing: 1px;
   transition: 0.5s;
 }
 
-button.message:hover {
+.button.message:hover {
   letter-spacing: 1px;
   transition: 0.5s;
   background: rgba(88, 164, 151, 0.5);
@@ -643,6 +658,7 @@ nav {
   font-family: "Myriad Pro Regular", serif;
   font-size: 1.4rem;
   transition: 0.3s ease-in-out;
+  font-weight: 400;
 }
 
 .hamburger {
@@ -742,6 +758,7 @@ nav {
   background-color: #000000e6;
   color: #fff;
   transition: 0.2s;
+  font-weight: 400;
 }
 
 .mobile-menu.is-open {
@@ -805,55 +822,4 @@ nav {
   -webkit-box-shadow: inset 0 0 6px transparent;
   background-color: gainsboro;
   z-index: 999;
-}
-
-.btn-class-name {
-  --color: 0, 254, 252;
-  border-radius: 0.5em;
-  transition: 0.3s;
-  background-color: rgba(var(--color), 0.2);
-  color: rgb(var(--color));
-  fill: rgb(var(--color));
-  font-family: monospace;
-  font-weight: bolder;
-  font-size: large;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  cursor: pointer;
-  border: 2px solid rgb(var(--color));
-  box-shadow: 0 0 10px rgba(var(--color), 0.4);
-  outline: none;
-  display: flex;
-  align-items: center;
-  padding: 0.5em 1em;
-  margin: 1em;
-}
-
-.btn-class-name:hover {
-  box-shadow: 0 0 0 5px rgba(var(--color), 0.5);
-}
-
-.btn-class-name span {
-  transform: scale(0.95);
-  transition: 0.3s;
-}
-
-.btn-class-name:hover span {
-  transform: scale(1);
-}
-
-.btn-class-name svg {
-  font-size: 0;
-  transform: scale(0.5) translateX(0%) rotate(-180deg);
-  transition: 0.3s;
-}
-
-.btn-class-name:hover svg {
-  font-size: 20px;
-  transform: scale(1) translateX(20%) rotate(0deg);
-}
-
-.btn-class-name:active {
-  transition: 0s;
-  box-shadow: 0 0 0 5px rgb(var(--color));
 }

@@ -60,6 +60,60 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
+
+    <style>
+      .btn-class-name {
+        z-index: 999;
+        --color: 254, 1, 154;
+        color: rgb(254, 234, 246);
+        border-radius: 0.5em;
+        transition: 0.3s;
+        background-color: rgba(var(--color), 0.3);
+        fill: rgb(var(--color));
+        font-family: monospace;
+        font-weight: bolder;
+        font-size: large;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+        border: 2px solid rgb(var(--color));
+        box-shadow: 0 0 10px rgba(var(--color), 0.4);
+        outline: none;
+        display: flex;
+        align-items: center;
+        padding: 0.5em 1em;
+        margin: 1em;
+      }
+
+      .btn-class-name:hover {
+        box-shadow: 0 0 0 5px rgba(var(--color), 0.5);
+      }
+
+      .btn-class-name span {
+        transform: scale(0.95);
+        transition: 0.3s;
+      }
+
+      .btn-class-name:hover span {
+        transform: scale(1);
+      }
+
+      .btn-class-name svg {
+        font-size: 0;
+        transform: scale(0.5) translateX(0%) rotate(-180deg);
+        transition: 0.3s;
+      }
+
+      .btn-class-name:hover svg {
+        font-size: 20px;
+        transform: scale(1) translateX(20%) rotate(0deg);
+      }
+
+      .btn-class-name:active {
+        transition: 0s;
+        box-shadow: 0 0 0 5px rgb(var(--color));
+      }
+    </style>
   </head>
 
   <body>
@@ -86,7 +140,7 @@
       <span></span>
     </div>
 
-    <nav id="navbar">
+    <nav id="navbar" style="font-weight: 400">
       <div class="nav-container">
         <button class="hamburger">
           <span></span>
@@ -174,7 +228,7 @@
             class="btn-class-name"
             onclick="location.href='https://play.google.com/store/apps/details?id=com.malhar2023.application&hl=en_US&pli=1'"
             type="button"
-            style="margin: 30px auto"
+            style="margin: 30px auto; font-family: monospace !important"
           >
             <span>Download the Official Malhar App!</span>
             <svg
