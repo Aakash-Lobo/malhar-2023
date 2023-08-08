@@ -64,6 +64,15 @@ body {
   overflow-x: hidden;
 }
 
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
@@ -733,20 +742,19 @@ nav {
 }
 
 .btn-class-name {
-  --color: 0, 254, 252;
+  color: rgb(254, 234, 246);
   border-radius: 0.5em;
   transition: 0.3s;
-  background-color: rgba(var(--color), 0.2);
-  color: rgb(var(--color));
-  fill: rgb(var(--color));
+  background-color: rgba(254, 1, 154, 0.2);
+  fill: rgb(254, 1, 154);
   font-family: monospace;
   font-weight: bolder;
   font-size: large;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   cursor: pointer;
-  border: 2px solid rgb(var(--color));
-  box-shadow: 0 0 10px rgba(var(--color), 0.4);
+  border: 2px solid rgb(254, 1, 154);
+  box-shadow: 0 0 10px rgba(254, 1, 154, 0.4);
   outline: none;
   display: flex;
   align-items: center;
@@ -755,7 +763,7 @@ nav {
 }
 
 .btn-class-name:hover {
-  box-shadow: 0 0 0 5px rgba(var(--color), 0.5);
+  box-shadow: 0 0 0 5px rgba(254, 1, 154, 0.5);
 }
 
 .btn-class-name span {
@@ -780,5 +788,5 @@ nav {
 
 .btn-class-name:active {
   transition: 0s;
-  box-shadow: 0 0 0 5px rgb(var(--color));
+  box-shadow: 0 0 0 5px rgb(254, 1, 154);
 }

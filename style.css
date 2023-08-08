@@ -428,7 +428,7 @@ img {
 
 /*toolbar*/
 
-footer{
+footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -443,7 +443,7 @@ footer{
   width: 100%;
 }
 
-.toolbar{
+.toolbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -454,7 +454,7 @@ footer{
   width: 100%;
 }
 
-.toolbar .socials-section{
+.toolbar .socials-section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -464,69 +464,18 @@ footer{
   width: 200px;
 }
 
-.toolbar .socials-section svg{
+.toolbar .socials-section svg {
   height: 30px;
   margin: 0px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.toolbar .socials-section svg:hover{
+.toolbar .socials-section svg:hover {
   transform: scale(1.1);
 }
 
-.btn-class-name {
-  --color: 0, 254, 252;
-  border-radius: .5em;
-  transition: .3s;
-  background-color: rgba(var(--color), .2);
-  color: rgb(var(--color));
-  fill: rgb(var(--color));
-  font-family: monospace;
-  font-weight: bolder;
-  font-size: large;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  cursor: pointer;
-  border: 2px solid rgb(var(--color));
-  box-shadow: 0 0 10px rgba(var(--color), .4);
-  outline: none;
-  display: flex;
-  align-items: center;
-  padding: .5em 1em;
-  margin: 1em;
-}
-
-.btn-class-name:hover {
-  box-shadow: 0 0 0 5px rgba(var(--color), .5);
-}
-
-.btn-class-name span {
-  transform: scale(.95);
-  transition: .3s;
-}
-
-.btn-class-name:hover span {
-  transform: scale(1);
-}
-
-.btn-class-name svg {
-  font-size: 0;
-  transform: scale(0.5) translateX(0%) rotate(-180deg);
-  transition: .3s;
-}
-
-.btn-class-name:hover svg {
-  font-size: 20px;
-  transform: scale(1) translateX(20%) rotate(0deg);
-}
-
-.btn-class-name:active {
-  transition: 0s;
-  box-shadow: 0 0 0 5px rgb(var(--color));
-}
-
-.toolbar .app-section{
+.toolbar .app-section {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -536,11 +485,62 @@ footer{
   padding: 0 20px;
   color: white;
   font-size: 1rem;
-
 }
 
 @media (max-width: 800px) {
-  .toolbar{
+  .toolbar {
     display: none;
   }
 }
+
+
+.btn-class-name {
+  color: rgb(254, 234, 246);
+  border-radius: 0.5em;
+  transition: 0.3s;
+  background-color: rgba(254, 1, 154, 0.2);
+  fill: rgb(254, 1, 154);
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: large;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border: 2px solid rgb(254, 1, 154);
+  box-shadow: 0 0 10px rgba(254, 1, 154, 0.4);
+  outline: none;
+  display: flex;
+  align-items: center;
+  padding: 0.5em 1em;
+  margin: 1em;
+}
+
+.btn-class-name:hover {
+  box-shadow: 0 0 0 5px rgba(254, 1, 154, 0.5);
+}
+
+.btn-class-name span {
+  transform: scale(0.95);
+  transition: 0.3s;
+}
+
+.btn-class-name:hover span {
+  transform: scale(1);
+}
+
+.btn-class-name svg {
+  font-size: 0;
+  transform: scale(0.5) translateX(0%) rotate(-180deg);
+  transition: 0.3s;
+}
+
+.btn-class-name:hover svg {
+  font-size: 20px;
+  transform: scale(1) translateX(20%) rotate(0deg);
+}
+
+.btn-class-name:active {
+  transition: 0s;
+  box-shadow: 0 0 0 5px rgb(254, 1, 154);
+}
+

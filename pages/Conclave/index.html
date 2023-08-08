@@ -37,6 +37,60 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  
+  <style>
+      .btn-class-name {
+        z-index: 999;
+        color: rgb(254, 234, 246);
+        border-radius: 0.5em;
+        transition: 0.3s;
+        background-color: rgba(254, 1, 154, 0.3);
+        fill: rgb(254, 1, 154);
+        font-family: monospace;
+        font-weight: bolder;
+        font-size: large;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+        border: 2px solid rgb(254, 1, 154);
+        box-shadow: 0 0 10px rgba(254, 1, 154, 0.4);
+        outline: none;
+        display: flex;
+        align-items: center;
+        padding: 0.5em 1em;
+        margin: 1em;
+      }
+
+      .btn-class-name:hover {
+        box-shadow: 0 0 0 5px rgba(254, 1, 154, 0.5);
+      }
+
+      .btn-class-name span {
+        transform: scale(0.95);
+        transition: 0.3s;
+      }
+
+      .btn-class-name:hover span {
+        transform: scale(1);
+      }
+
+      .btn-class-name svg {
+        font-size: 0;
+        transform: scale(0.5) translateX(0%) rotate(-180deg);
+        transition: 0.3s;
+      }
+
+      .btn-class-name:hover svg {
+        font-size: 20px;
+        transform: scale(1) translateX(20%) rotate(0deg);
+      }
+
+      .btn-class-name:active {
+        transition: 0s;
+        box-shadow: 0 0 0 5px rgb(254, 1, 154);
+      }
+    </style>
+  
 </head>
 
 <body>
@@ -116,10 +170,11 @@
               d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
             </path>
           </svg>
-        </button>
+           </button>
       </div>
     </div>
   </nav>
+
 
   <div class="flex-container">
     <h1 aria-label="Conclave">Conclave</h1>
