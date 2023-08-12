@@ -37,13 +37,13 @@ h1{
   font-size: 40px;
   font-family: "Myriad Pro Regular" !important;
   color:white;
-  
+
 
 
 }
 
 body {
-  /* font-family: "Amaranth", sans-serif; */
+  font-family: "Myriad Pro Regular" !important;
   text-align: center;
   background-color: #edf3f8;
 }
