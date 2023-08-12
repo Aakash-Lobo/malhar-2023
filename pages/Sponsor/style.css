@@ -35,8 +35,9 @@
 h1{
   margin-top: 8rem;
   font-size: 40px;
-  font-style: normal;
+  font-family: "Myriad Pro Regular" !important;
   color:white;
+  
 
 
 }
