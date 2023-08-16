@@ -1087,3 +1087,46 @@
     box-shadow: 0 0 0 5px rgb(254, 1, 154);
   }
   
+  @media( max-width:1600px){
+
+    .card__front {
+    
+      padding: 2em 2em 2.5em 2em;
+      border-radius: 10px;
+      height: 15vw;
+    
+      transition: 
+        opacity 250ms ease,
+        transform 450ms ease;
+    }
+
+
+  }
+  @media (max-width: 990px){
+    .card__front {
+    
+      padding: 2em 2em 2.5em 2em;
+      border-radius: 10px;
+      height: 55vw;
+    
+      transition: 
+        opacity 250ms ease,
+        transform 450ms ease;
+    }
+  }
+
+ 
+
+  @media (min-width:1000px) and (max-width: 1400px) {
+    .card__front {
+    
+      padding: 2em 2em 2.5em 2em;
+      border-radius: 10px;
+      height: 25vw;
+    
+      transition: 
+        opacity 250ms ease,
+        transform 450ms ease;
+    }
+
+  }
